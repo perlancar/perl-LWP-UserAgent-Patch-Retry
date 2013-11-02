@@ -25,7 +25,7 @@ my $p_send_request = sub {
         if (($config{-criteria} && $config{-criteria}->($self, $resp)) ||
                  !$resp->is_success) {
             $retries++;
-            if ($retries > $config{-retries}) {
+            if ($retries > $config{-n}) {
                 $log->tracef("Reached retry limit for LWP request (%s %s)",
                              $request->method, $request->uri);
                 last;
