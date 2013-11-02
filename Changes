@@ -1,5 +1,10 @@
 Revision history for LWP-UserAgent-Patch-Retry
 
+0.02    2013-11-02 (SHARYANTO)
+
+        - No functional changes. Fix example in Synopsis.
+
+
 0.01    2013-11-02 (SHARYANTO)
 
         - First release.
