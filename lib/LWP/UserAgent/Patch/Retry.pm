@@ -103,7 +103,7 @@ you do not want to retry on 404 errors:
  use LWP::UserAgent::Patch::Retry
      -criteria => sub {
          my ($self, $resp) = @_;
-         return 1 if $resp->is_success || $resp->code == 404;
+         return 1 if !$resp->is_success && $resp->code != 404;
      };
 
 
