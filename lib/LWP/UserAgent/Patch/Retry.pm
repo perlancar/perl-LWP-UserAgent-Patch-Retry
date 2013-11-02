@@ -98,7 +98,13 @@ Delay between retries, in seconds.
 
 Specify custom criteria of whether to retry. Will be passed C<< ($self,
 $response) >> and should return 1 if retry should be performed. For example if
-you do not want to retry on 404 errors.
+you do not want to retry on 404 errors:
+
+ use LWP::UserAgent::Patch::Retry
+     -criteria => sub {
+         my ($self, $resp) = @_;
+         return 1 if $resp->is_success || $resp->code == 404;
+     };
 
 
 =head1 FAQ
