@@ -115,11 +115,6 @@ By patching, you do not need to replace all the client code which uses
 LWP::UserAgent (or WWW::Mechanize, and so on).
 
 
-=head1 TODO
-
-More complex retrying delays (exponential backoff).
-
-
 =head1 SEE ALSO
 
 L<LWP::UserAgent::Determined>, L<LWP::UserAgent::ExponentialBackoff>
