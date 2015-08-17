@@ -1,14 +1,15 @@
 package LWP::UserAgent::Patch::Retry;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 no warnings;
-use Log::Any '$log';
+use Log::Any::IfLOG '$log';
 
 use Module::Patch 0.12 qw();
 use base qw(Module::Patch);
-
-# VERSION
 
 our %config;
 
