@@ -6,7 +6,7 @@ package LWP::UserAgent::Patch::Retry;
 use 5.010001;
 use strict;
 no warnings;
-use Log::Any::IfLOG '$log';
+use Log::ger;
 
 use Module::Patch 0.12 qw();
 use base qw(Module::Patch);
@@ -27,12 +27,12 @@ my $p_send_request = sub {
                  !$resp->is_success) {
             $retries++;
             if ($retries > $config{-n}) {
-                $log->tracef("Reached retry limit for LWP request (%s %s)",
+                log_trace("Reached retry limit for LWP request (%s %s)",
                              $request->method, $request->uri);
                 last;
             } else {
                 sleep $config{-delay};
-                $log->tracef("Retrying LWP request (%s %s) (#%d)",
+                log_trace("Retrying LWP request (%s %s) (#%d)",
                              $request->method, $request->uri, $retries);
                 next;
             }
