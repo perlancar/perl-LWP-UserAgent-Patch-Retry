@@ -60,7 +60,7 @@ sub patch_data {
         patches => [
             {
                 action => 'wrap',
-                mod_version => qr/^6\.0.+/,
+                mod_version => qr/^6\.+/,
                 sub_name => 'send_request',
                 code => $p_send_request,
             },
