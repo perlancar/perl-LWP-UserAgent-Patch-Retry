@@ -1,3 +1,10 @@
+0.050   2019-09-20  Released-By: PERLANCAR; Urgency: medium
+
+	- No functional changes.
+
+	- Lax version checking: 6.0.x -> 6.x.
+
+
 0.04    2017-07-10  Released-By: PERLANCAR
 
 	- No functional changes.
